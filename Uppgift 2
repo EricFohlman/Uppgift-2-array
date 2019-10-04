@@ -1,0 +1,23 @@
+using System;
+
+namespace Uppgift_2_Arrayer
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] temperatur = new double[] { 4.5, 3.2, 6.7, 6.1, 2.1, 1.6, 2.9 };
+            Console.WriteLine("Medelvärde: " + Medel(temperatur));
+        }
+        static double Medel(double[] a)
+        {
+            double summa = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                summa += a[i];
+            }
+            double medelvärde = summa / a.Length;
+            return (Math.Round(medelvärde, 1));
+        }
+    }
+}
